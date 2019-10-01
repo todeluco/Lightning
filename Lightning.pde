@@ -1,21 +1,21 @@
-PImage photo;
+PImage harrypotter;
 
-int startX = 100;
-int startY = 150;
-int endX = 100;
-int endY = 150;
+int startX = 218;
+int startY = 163;
+int endX = 218;
+int endY = 163;
 
 void setup()
 {
   size(500,300);
   strokeWeight(3);
-  background(0);
-  photo = loadImage("HarryPotter.png");
+  background(200);
+  harrypotter = loadImage("HarryPotter.png");
 }
 void draw()
 {
-  image(photo,100,0);
-  stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+  image(harrypotter,-70,100,300,200);
+  stroke(125,(int)(Math.random()*85)+150,102);
   while(endX < 500){
     startX = startX + ((int)(Math.random()*9)+1);
     startY = startY + ((int)(Math.random()*18)-9);
@@ -26,8 +26,8 @@ void draw()
 }
 void mousePressed()
 {
-  startX = 100;
-  startY = 150;
-  endX = 100;
-  endY = 150;
+  startX = 218;
+  startY = 163;
+  endX = 218;
+  endY = 163;
 }
